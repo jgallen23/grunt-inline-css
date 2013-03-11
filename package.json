@@ -4,8 +4,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/jgallen23/grunt-inline-css",
   "author": {
-    "name": "Greg Allen",
-    "email": "@jgaui"
+    "name": "Greg Allen"
   },
   "repository": {
     "type": "git",
@@ -38,5 +37,8 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "dependencies": {
+    "juice": "~0.2.0"
+  }
 }
