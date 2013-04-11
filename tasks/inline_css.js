@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     this.files.forEach(function(f) {
 
       var filepath = f.src.toString();
-      if (typeof filepath != 'string') {
+      if (typeof filepath !== 'string') {
         grunt.log.error('src must be a single string');
         return false;
       }
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
 
         index++;
-        if (index == count) {
+        if (index === count) {
           done();
         }
 
