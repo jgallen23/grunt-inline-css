@@ -16,18 +16,17 @@ module.exports = function(grunt) {
   var juice = require('juice');
 
   grunt.registerMultiTask('inlinecss', 'Takes an html file with css link and turns inline.  Great for emails.', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-    });
-
-    var done = this.async();
-    var index = 0;
-    var count = this.files.length;
+    // Store reference to local scope
+    var _this = this,
+        done = this.async(),
+        index = 0,
+        count = this.files.length,
+        filepath;
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
 
-      var filepath = f.src.toString();
+      filepath = f.src.toString();
       if (typeof filepath !== 'string') {
         grunt.log.error('src must be a single string');
         return false;
@@ -37,8 +36,8 @@ module.exports = function(grunt) {
         grunt.log.error('Source file "' + filepath + '" not found.');
         return false;
       }
-
-      juice(filepath, function(err, html) {
+      
+      juice(filepath, _this.data.options, function(err, html) {
 
         if (err) {
           return grunt.log.error(err);
@@ -46,7 +45,6 @@ module.exports = function(grunt) {
 
         grunt.file.write(f.dest, html);
         grunt.log.writeln('File "' + f.dest + '" created.');
-
 
         index++;
         if (index === count) {
