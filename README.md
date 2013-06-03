@@ -26,6 +26,8 @@ In your project's Gruntfile, add a section named `inlinecss` to the data object 
 grunt.initConfig({
 	inlinecss: {
 		main: {
+			options: {
+			},
 			files: {
 				'out.html': 'in.html',
 			}
@@ -33,6 +35,8 @@ grunt.initConfig({
 	}
 })
 ```
+
+You can see available options [here](https://github.com/LearnBoost/juice)
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
