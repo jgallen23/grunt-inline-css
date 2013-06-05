@@ -39,6 +39,18 @@ module.exports = function(grunt) {
       },
     },
 
+    inlinecontent: {
+      default_options: {
+        files: [
+          {
+            src: 'examples/in.html',
+            css: ['examples/file.css'],
+            dest: 'examples/out.html',
+          },
+        ],
+      },
+    },
+
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js'],
@@ -56,7 +68,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'inlinecss', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'inlinecss', 'inlinecontent', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
