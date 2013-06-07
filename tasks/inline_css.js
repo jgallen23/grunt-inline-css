@@ -1,11 +1,12 @@
 /*
- * grunt-inline-css
- * https://github.com/jgallen23/grunt-inline-css
+ * grunt-inline-content
+ * https://github.com/straker/grunt-inline-content
  *
  * Copyright (c) 2013 Greg Allen
+ * Forked by Steven Lambert until merged into grunt-inline-css
+ * https://github.com/jgallen23/grunt-inline-css
  * Licensed under the MIT license.
  */
-
 'use strict';
 
 module.exports = function(grunt) {
@@ -52,6 +53,66 @@ module.exports = function(grunt) {
         }
 
       });
+
+    });
+  });
+
+  grunt.registerMultiTask('inlinecontent', 'Takes an html file and css files and turns inline.  Great for emails.', function() {
+    // There are no options for juice.inlinecontent
+    var done = this.async();
+    var index = 0;
+    var count = this.files.length;
+
+    // Iterate over all specified file groups.
+    this.files.forEach(function(f) {
+
+      var htmlpath = f.src.toString();
+      var csspath = '';
+      var html = '';
+      var css = '';
+      var error = false;
+
+      if (typeof htmlpath !== 'string') {
+        grunt.log.error('src must be a single string');
+        return false;
+      }
+
+      if (!grunt.file.exists(htmlpath) || !htmlpath) {
+        grunt.log.error('Source file "' + htmlpath + '" not found.');
+        return false;
+      }
+
+      html = grunt.file.read(htmlpath).toString();
+
+      // Iterate over all css files
+      f.css.forEach(function(c) {
+        csspath = c.toString();
+
+        if (typeof csspath !== 'string') {
+          grunt.log.error('src must be a single string');
+          error = true;
+          return false;
+        }
+
+        if (!grunt.file.exists(csspath) || !csspath) {
+          grunt.log.error('CSS file "' + csspath + '" not found.');
+          error = true;
+          return false;
+        }
+
+        css += grunt.file.read(csspath).toString();
+      });
+
+      if (!error) {
+        grunt.file.write(f.dest, juice.inlineContent(html, css));
+        grunt.log.writeln('File "' + f.dest + '" created.');
+      }
+
+
+      index++;
+      if (index === count) {
+        done();
+      }
 
     });
   });
