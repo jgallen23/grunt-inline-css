@@ -38,5 +38,24 @@ grunt.initConfig({
 
 You can see available options [here](https://github.com/LearnBoost/juice)
 
+## The "inlinecontent" task
+
+### Overview
+In your project's Gruntfile, add a section named `inlinecontent` to the data object passed into `grunt.initConfig()`.
+
+```js
+grunt.initConfig({
+	inlinecontent: {
+		main: {
+			{
+				src: 'examples/in.html',
+				css: ['examples/file.css'],
+				dest: 'examples/out.html',
+			},
+		}
+	}
+})
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
