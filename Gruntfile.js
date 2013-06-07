@@ -1,8 +1,10 @@
 /*
- * grunt-inline-css
- * https://github.com/jgallen23/grunt-inline-css
+ * grunt-inline-content
+ * https://github.com/straker/grunt-inline-content
  *
  * Copyright (c) 2013 Greg Allen
+ * Forked by Steven Lambert until merged into grunt-inline-css
+ * https://github.com/jgallen23/grunt-inline-css
  * Licensed under the MIT license.
  */
 
