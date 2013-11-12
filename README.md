@@ -1,6 +1,6 @@
 # grunt-inline-css
 
-> Takes an html file with css link and turns inline.	Great for emails.
+> Takes an html file with css link and turns inline. Great for emails. It leverages the amazing [juice](https://github.com/LearnBoost/juice) library.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
@@ -29,14 +29,14 @@ grunt.initConfig({
 			options: {
 			},
 			files: {
-				'out.html': 'in.html',
+				'out.html': 'in.html'
 			}
 		}
 	}
 })
 ```
 
-You can see available options [here](https://github.com/LearnBoost/juice)
+You can see available options [here](https://github.com/LearnBoost/juice#juicefilepath-options-callback)
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
