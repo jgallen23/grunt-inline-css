@@ -1,4 +1,12 @@
 
+0.1.4 / 2013-11-12 
+==================
+
+  * updated juice dep
+  * updated readme to give some love to juice
+  * bug - options can now be passed in.  fixes #7
+  * tests
+
 0.1.3 / 2013-06-03 
 ==================
 
