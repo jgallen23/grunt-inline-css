@@ -30,11 +30,12 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     inlinecss: {
-      default_options: {
+      basic: {
         options: {
+          extraCss: 'body { background: green; }'
         },
         files: {
-          'examples/out.html': 'examples/in.html',
+          'tmp/out.html': 'test/fixtures/in.html'
         },
       },
     },

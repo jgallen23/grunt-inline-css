@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('inlinecss', 'Takes an html file with css link and turns inline.  Great for emails.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.data.options;
+    var options = this.options();
     var done = this.async();
     var index = 0;
     var count = this.files.length;
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     this.files.forEach(function(f) {
 
       var filepath = f.src.toString();
-      if (typeof filepath !== 'string') {
+      if (typeof filepath !== 'string' || filepath === '') {
         grunt.log.error('src must be a single string');
         return false;
       }
