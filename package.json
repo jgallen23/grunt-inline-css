@@ -1,6 +1,6 @@
 {
   "name": "grunt-inline-css",
-  "description": "Takes an html file with css link or separate css files and turns inline.  Great for emails. Forked from grunt-inline-css until merged.",
+  "description": "Takes an html file with css link or separate css files and turns inline.  Great for emails.",
   "version": "0.1.3",
   "homepage": "https://github.com/jgallen23/grunt-inline-css",
   "author": {
