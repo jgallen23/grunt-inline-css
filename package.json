@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/straker/grunt-inline-css.git"
+    "url": "git://github.com/jgallen23/grunt-inline-css.git"
   },
   "bugs": {
     "url": "https://github.com/jgallen23/grunt-inline-css/issues"
