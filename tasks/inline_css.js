@@ -1,6 +1,6 @@
 /*
  * grunt-inline-css
- * https://github.com/straker/grunt-inline-css
+ * https://github.com/jgallen23/grunt-inline-css
  *
  * Copyright (c) 2013 Greg Allen
  * Licensed under the MIT license.
