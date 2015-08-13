@@ -39,6 +39,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "juice": "~1.2.0"
+    "juice": "~1.3.4"
   }
 }
