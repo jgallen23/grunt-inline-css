@@ -47,6 +47,12 @@ module.exports = function(grunt) {
           'tmp/out_with_important.html': 'test/fixtures/in.html'
         },
       },
+      does_not_exist: {
+        options: {},
+        files: {
+          'tmp/out_does_not_exist.html': 'test/fixtures/in_does_not_exist.html'
+        },
+      }
     },
 
     // Unit tests.
