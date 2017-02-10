@@ -32,10 +32,19 @@ module.exports = function(grunt) {
     inlinecss: {
       basic: {
         options: {
-          extraCss: 'body { background: green; }'
+          extraCss: 'body { background: green; }',
         },
         files: {
           'tmp/out.html': 'test/fixtures/in.html'
+        },
+      },
+      with_important: {
+        options: {
+          extraCss: 'body { background: green; }',
+          preserveImportant: true
+        },
+        files: {
+          'tmp/out_with_important.html': 'test/fixtures/in.html'
         },
       },
     },

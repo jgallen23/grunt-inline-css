@@ -36,5 +36,15 @@ exports.inline_css = {
     test.equal(actual, expected, 'should inline css');
 
     test.done();
+  },
+
+  with_important: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/out_with_important.html');
+    var expected = grunt.file.read('test/expected/out_with_important.html');
+    test.equal(actual, expected, 'should inline css');
+
+    test.done();
   }
 };

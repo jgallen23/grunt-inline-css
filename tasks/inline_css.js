@@ -36,6 +36,8 @@ module.exports = function(grunt) {
         return false;
       }
 
+      grunt.log.writeln("filepath:", filepath);
+
       juice.juiceFile(filepath, options, function(err, html) {
 
         if (err) {
