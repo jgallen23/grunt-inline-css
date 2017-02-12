@@ -6,6 +6,11 @@
   "author": {
     "name": "Greg Allen"
   },
+  "contributors": [
+    {
+      "name": "Simon Bruce"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/jgallen23/grunt-inline-css.git"
@@ -24,7 +29,8 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "travis": "grunt test"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~1.1.0",
