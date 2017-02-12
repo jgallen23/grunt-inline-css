@@ -1,0 +1,16 @@
+language: node_js
+before_script:
+  - npm install -g grunt-cli@latest
+
+script:
+  - npm run travis
+
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4"
+  - "6"
+  - "7"
+  - "node"
+
+sudo: false

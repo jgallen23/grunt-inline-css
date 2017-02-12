@@ -36,5 +36,32 @@ exports.inline_css = {
     test.equal(actual, expected, 'should inline css');
 
     test.done();
+  },
+
+  with_important: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/out_with_important.html');
+    var expected = grunt.file.read('test/expected/out_with_important.html');
+    test.equal(actual, expected, 'should inline css');
+
+    test.done();
+  },
+
+  does_not_exist: function(test) {
+    test.expect(0);
+
+    try {
+      var actual = grunt.file.read('tmp/out_does_not_exist.html');
+    } catch(err) {
+
+      if (err.origError.code === 'ENOENT') {
+        return test.done();
+      }
+
+      return test.done(new Error('Should have errored with a file not found: ' + err.code));
+    }
+
+    test.done(new Error('Should have errored'));
   }
 };

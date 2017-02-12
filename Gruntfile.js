@@ -32,12 +32,27 @@ module.exports = function(grunt) {
     inlinecss: {
       basic: {
         options: {
-          extraCss: 'body { background: green; }'
+          extraCss: 'body { background: green; }',
         },
         files: {
           'tmp/out.html': 'test/fixtures/in.html'
         },
       },
+      with_important: {
+        options: {
+          extraCss: 'body { background: green; }',
+          preserveImportant: true
+        },
+        files: {
+          'tmp/out_with_important.html': 'test/fixtures/in.html'
+        },
+      },
+      does_not_exist: {
+        options: {},
+        files: {
+          'tmp/out_does_not_exist.html': 'test/fixtures/in_does_not_exist.html'
+        },
+      }
     },
 
     // Unit tests.
