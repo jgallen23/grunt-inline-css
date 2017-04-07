@@ -28,6 +28,8 @@ In your project's Gruntfile, add a section named `inlinecss` to the data object 
 grunt.initConfig({
 	inlinecss: {
 		main: {
+			codeBlocks: {
+			},
 			options: {
 			},
 			files: {
@@ -38,7 +40,7 @@ grunt.initConfig({
 })
 ```
 
-You can see available options [here](https://github.com/Automattic/juice/tree/v3.0.1#options)
+You can see available options [here](https://github.com/Automattic/juice/tree/v4.0.2#options)
 
 ## Contributing
 
