@@ -28,6 +28,8 @@ In your project's Gruntfile, add a section named `inlinecss` to the data object 
 grunt.initConfig({
 	inlinecss: {
 		main: {
+			codeBlocks: {
+			},
 			options: {
 			},
 			files: {

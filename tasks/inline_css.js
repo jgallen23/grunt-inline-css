@@ -18,9 +18,12 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('inlinecss', 'Takes an html file with css link and turns inline.  Great for emails.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options();
+    var codeBlocks = this.data.codeBlocks;
     var done = this.async();
     var index = 0;
     var count = this.files.length;
+
+    juice.codeBlocks = Object.assign({}, juice.codeBlocks, codeBlocks);
 
     var increaseCount = function () {
       index++;
