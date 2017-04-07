@@ -38,7 +38,7 @@ grunt.initConfig({
 })
 ```
 
-You can see available options [here](https://github.com/Automattic/juice/tree/v3.0.1#options)
+You can see available options [here](https://github.com/Automattic/juice/tree/v4.0.2#options)
 
 ## Contributing
 
