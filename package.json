@@ -1,6 +1,6 @@
 {
   "name": "grunt-inline-css",
-  "description": "Takes an html file with css link and turns inline.  Great for emails.",
+  "description": "Takes an html file with inline css or separate css files and turns inline.  Great for emails.",
   "version": "1.0.0",
   "homepage": "https://github.com/jgallen23/grunt-inline-css",
   "author": {
@@ -26,7 +26,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.0.0"
   },
   "scripts": {
     "test": "grunt test",
@@ -45,6 +45,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "juice": "~3.0.1"
+    "juice": "^4.1.0"
   }
 }
