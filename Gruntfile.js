@@ -58,8 +58,10 @@ module.exports = function(grunt) {
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js'],
+      options: {
+        reporter: 'default'
+      }
     },
-
   });
 
   // Actually load this plugin's task(s).
@@ -76,5 +78,4 @@ module.exports = function(grunt) {
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
-
 };

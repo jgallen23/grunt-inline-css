@@ -1,6 +1,6 @@
 'use strict';
 
-var grunt = require('grunt');
+const grunt = require('grunt');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -23,43 +23,43 @@ var grunt = require('grunt');
 */
 
 exports.inline_css = {
-  setUp: function(done) {
+  setUp(done) {
     // setup here if necessary
     done();
   },
 
-  basic: function(test) {
+  basic(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/out.html');
-    var expected = grunt.file.read('test/expected/out.html');
+    const actual = grunt.file.read('tmp/out.html');
+    const expected = grunt.file.read('test/expected/out.html');
     test.equal(actual, expected, 'should inline css');
 
     test.done();
   },
 
-  with_important: function(test) {
+  with_important(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/out_with_important.html');
-    var expected = grunt.file.read('test/expected/out_with_important.html');
+    const actual = grunt.file.read('tmp/out_with_important.html');
+    const expected = grunt.file.read('test/expected/out_with_important.html');
     test.equal(actual, expected, 'should inline css');
 
     test.done();
   },
 
-  does_not_exist: function(test) {
+  does_not_exist(test) {
     test.expect(0);
 
     try {
-      var actual = grunt.file.read('tmp/out_does_not_exist.html');
+      grunt.file.read('tmp/out_does_not_exist.html');
     } catch(err) {
 
       if (err.origError.code === 'ENOENT') {
         return test.done();
       }
 
-      return test.done(new Error('Should have errored with a file not found: ' + err.code));
+      return test.done(new Error(`Should have errored with a file not found: ${err.code}`));
     }
 
     test.done(new Error('Should have errored'));
