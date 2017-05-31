@@ -36,6 +36,8 @@ passed into `grunt.initConfig()`.
 grunt.initConfig({
     inlinecss: {
         main: {
+            codeBlocks: {
+            },
             options: {
             },
             files: {
@@ -48,6 +50,9 @@ grunt.initConfig({
 
 You can see available options
 [here](https://github.com/Automattic/juice/tree/v4.1.0#options)
+
+You can see how to use `codeBlocks`
+[here](https://github.com/Automattic/juice/tree/v4.1.0#juicecodeblocks)
 
 ## The "inlinecontent" task
 
